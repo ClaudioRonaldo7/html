@@ -1,271 +1,317 @@
 <html lang="ES">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exlusive CGKR Store</title>
-    <style type="text/css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exlusive CGKR Store</title>
+  <style type="text/css">
     @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans";
-}
-.contenido{
-  max-width: 1250px;/*Tamano de categoria de zapatillas*/ 
-  width: 100%;
-  margin: 40px auto;
-  display: flex;
-}
-.mostrador{
-  width: 100%;
-  transition: .5s ease;
-}
-.mostrador .fila{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0px;/*tamano del cuadrado grande al seleccionar */
-}
-.mostrador .fila .item{
-  max-width: 210px;
-  padding: 30px;
-  height: 300px;/* tamano de diferencia de las zapatillas alto y bajo*/
-  text-align: center ;
-  margin: 0 20px;
-  cursor: pointer;
-  border-radius: 20px;/*tamano y forma de la zapailla*/
-  transition: .3s;
-}
-.mostrador .fila .item:hover{
-  background-color: #ffffff;/*color de cuadrado de las zapatillas*/
-}
-.mostrador .fila .item img{
-  width: 100%;/*Tamano de la zapatilla dentro del cuadrado*/
-  margin: 30px 0;
-}
-.mostrador .fila .item .descripcion{
-  color: #707070;
-  font-weight: bold;
-}
-.mostrador .fila .item .precio{
-  color: #f81515;/*Color de precio*/
-  font-weight: bold;
-  font-size: 22px;/*Tamano del precio*/
-}
-.seleccion{
-  transition: .5s ease;
-  opacity: 0;
-  width: 0%;
-  border: 1px solid #cccc;/*Color de la linea al seleccionar*/
-  position: relative;
-  display: flex; 
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-.cerrar{
-  position: absolute;
-  right: 5px;
-  top: 0px;/*tamano de la x(cerrar)*/
-  cursor: pointer;
-}
-.info{
-  padding: 20px;/*Borde de precio y talla*/
-}
-.info img{
-  display: block;
-  margin: 40px;/*lugar donde se posiciona la zapatilla(derecha o izquirda) */
-  width: 85%;/*Tamano de la zapatilla al entrar a la seleccion */
-}
-.info h2{
-  color: #707070;/*Color de letras Modelos*/
-  margin-bottom: 0px;/*separacion de letras "Modelos"*/
-}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans";
+    }
+
+    .contenido {
+      max-width: 1250px;
+      /*Tamano de categoria de zapatillas*/
+      width: 100%;
+      margin: 40px auto;
+      display: flex;
+    }
+
+    .mostrador {
+      width: 100%;
+      transition: .5s ease;
+    }
+
+    .mostrador .fila {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0px;
+      /*tamano del cuadrado grande al seleccionar */
+    }
+
+    .mostrador .fila .item {
+      max-width: 210px;
+      padding: 30px;
+      height: 300px;
+      /* tamano de diferencia de las zapatillas alto y bajo*/
+      text-align: center;
+      margin: 0 20px;
+      cursor: pointer;
+      border-radius: 20px;
+      /*tamano y forma de la zapailla*/
+      transition: .3s;
+    }
+
+    .mostrador .fila .item:hover {
+      background-color: #ffffff;
+      /*color de cuadrado de las zapatillas*/
+    }
+
+    .mostrador .fila .item img {
+      width: 100%;
+      /*Tamano de la zapatilla dentro del cuadrado*/
+      margin: 30px 0;
+    }
+
+    .mostrador .fila .item .descripcion {
+      color: #707070;
+      font-weight: bold;
+    }
+
+    .mostrador .fila .item .precio {
+      color: #f81515;
+      /*Color de precio*/
+      font-weight: bold;
+      font-size: 22px;
+      /*Tamano del precio*/
+    }
+
+    .seleccion {
+      transition: .5s ease;
+      opacity: 0;
+      width: 0%;
+      border: 1px solid #cccc;
+      /*Color de la linea al seleccionar*/
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .cerrar {
+      position: absolute;
+      right: 5px;
+      top: 0px;
+      /*tamano de la x(cerrar)*/
+      cursor: pointer;
+    }
+
+    .info {
+      padding: 20px;
+      /*Borde de precio y talla*/
+    }
+
+    .info img {
+      display: block;
+      margin: 40px;
+      /*lugar donde se posiciona la zapatilla(derecha o izquirda) */
+      width: 85%;
+      /*Tamano de la zapatilla al entrar a la seleccion */
+    }
+
+    .info h2 {
+      color: #707070;
+      /*Color de letras Modelos*/
+      margin-bottom: 0px;
+      /*separacion de letras "Modelos"*/
+    }
 
 
-.info p{
-  font-size: 15px;/*tamano de (descripcion del modelo)*/
-  color: #707070;/*Color de letras "descripcion del modelo"*/
-  margin-bottom: 0px;/*lugar para colocar el "Agregar al carrito"*/
-}
-.info .precio{
-  font-size: 20px;/*tamano del precio*/
-  font-weight: bold;/*estilo de letra*/
-  color: #707070;/*Color de letras "precio"*/
-  margin-bottom: 0px;
-  display: block;
-}
-.info .fila{
-  display: flex;
-  align-items: flex-end;
-}
-.info .fila label{
-  display: block;
-  margin-bottom: 0px;
-}
-.info .fila select{
-  width: 80px;/*Tamano(ancho) de la talla*/
-  font-size: 19px;/*Tamano del numero de la talla*/
-  padding: 0px;/*Tamano(alto) de la talla*/
-  margin-right: 30px;
-}
-.info .fila button{
-  height: 30px;/*Tamano de "agregar al carrito"*/
-  border: none;
-  width: 1000px;
-  padding: 0px;
-  color: #ffff;
-  background-color: #f81515;
-}
+    .info p {
+      font-size: 15px;
+      /*tamano de (descripcion del modelo)*/
+      color: #707070;
+      /*Color de letras "descripcion del modelo"*/
+      margin-bottom: 0px;
+      /*lugar para colocar el "Agregar al carrito"*/
+    }
 
-    </style>
+    .info .precio {
+      font-size: 20px;
+      /*tamano del precio*/
+      font-weight: bold;
+      /*estilo de letra*/
+      color: #707070;
+      /*Color de letras "precio"*/
+      margin-bottom: 0px;
+      display: block;
+    }
+
+    .info .fila {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .info .fila label {
+      display: block;
+      margin-bottom: 0px;
+    }
+
+    .info .fila select {
+      width: 80px;
+      /*Tamano(ancho) de la talla*/
+      font-size: 19px;
+      /*Tamano del numero de la talla*/
+      padding: 0px;
+      /*Tamano(alto) de la talla*/
+      margin-right: 30px;
+    }
+
+    .info .fila button {
+      height: 30px;
+      /*Tamano de "agregar al carrito"*/
+      border: none;
+      width: 1000px;
+      padding: 0px;
+      color: #ffff;
+      background-color: #f81515;
+    }
+  </style>
 </head>
+
 <body>
-    <section class="contenido">
-    <div class="mostrador" id="mostrador"> 
-        <div class="fila">
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg1.jpeg" alt="">
-                    <p class="description">Zapatos De Futbol Adidas</p>
-                    <span class="precio">$ 199.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg2.jpeg" alt="">
-                    <p class="description">vans Modelo 2</p>
-                    <span class="precio">$ 72.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg3.jpeg" alt="">
-                    <p class="description">Vans Modelo 3</p>
-                    <span class="precio">$ 39.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg4.jpeg" alt="">
-                    <p class="description">Nike Modelo 4</p>
-                    <span class="precio">$ 84.990 </span>
-                </div>
-            </div>
+  <section class="contenido">
+    <div class="mostrador" id="mostrador">
+      <div class="fila">
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg1.jpeg" alt="">
+            <p class="description">Zapatos De Futbol Adidas</p>
+            <span class="precio">$ 199.990 </span>
+          </div>
         </div>
-        <div class="fila">
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg5.jpeg" alt="">
-                    <p class="description">Nike Modelo 5</p>
-                    <span class="precio">$ 134.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg6.jpeg" alt="">
-                    <p class="description">Converse Modelo 6</p>
-                    <span class="precio">$ 74.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg7.jpeg" alt="">
-                    <p class="description">Converse Modelo 7</p>
-                    <span class="precio">$ 74.990 </span>
-                </div>
-            </div>
-            <div class="item" onclick="cargar(this)">
-                <div class="contenedor-foto">
-                    <img src="Imagenes/Limg8.jpeg" alt="">
-                    <p class="description">Convers Modelo 8</p>
-                    <span class="precio">$ 72.990 </span>
-                </div>
-            <!-- 
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg2.jpeg" alt="">
+            <p class="description">vans Modelo 2</p>
+            <span class="precio">$ 72.990 </span>
+          </div>
+        </div>
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg3.jpeg" alt="">
+            <p class="description">Vans Modelo 3</p>
+            <span class="precio">$ 39.990 </span>
+          </div>
+        </div>
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg4.jpeg" alt="">
+            <p class="description">Nike Modelo 4</p>
+            <span class="precio">$ 84.990 </span>
+          </div>
+        </div>
+      </div>
+      <div class="fila">
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg5.jpeg" alt="">
+            <p class="description">Nike Modelo 5</p>
+            <span class="precio">$ 134.990 </span>
+          </div>
+        </div>
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg6.jpeg" alt="">
+            <p class="description">Converse Modelo 6</p>
+            <span class="precio">$ 74.990 </span>
+          </div>
+        </div>
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg7.jpeg" alt="">
+            <p class="description">Converse Modelo 7</p>
+            <span class="precio">$ 74.990 </span>
+          </div>
+        </div>
+        <div class="item" onclick="cargar(this)">
+          <div class="contenedor-foto">
+            <img src="Imagenes/Limg8.jpeg" alt="">
+            <p class="description">Convers Modelo 8</p>
+            <span class="precio">$ 72.990 </span>
+          </div>
+          <!-- 
                 <div class="item" onclick="cargar(this)">
                     <div class="contenedor-foto">
                         <img src="Imagenes/CGKR.webp" alt="Imagenes/CGKR.webp">
                         <p class="description">Nike Modelo 9</p>
                         <span class="precio">$ 119.990 </span>
                     </div>-->
-                    
-            </div>
+
         </div>
+      </div>
     </div>
 
     <!-- Contenedor del item seleccionado -->
     <div class="seleccion" id="seleccion">
-        <div class="cerrar" onclick="cerrar()">
-            &#x2715
+      <div class="cerrar" onclick="cerrar()">
+        &#x2715
+      </div>
+      <div class="info">
+        <img src="Imagenes/img9.jpeg" alt="" id="img">
+        <h2 id="modelo">Nike Modelo 1</h2>
+        <p id="descripcion">Descripcion Modelo 1 </p>
+
+        <span class="precio" id="precio">$159.000</span>
+
+        <div class="fila">
+          <div class="SIZE">
+            <label for="">Tallas</label>
+            <select name="" id="">
+              <option value="">35</option>
+              <option value="">36</option>
+              <option value="">37</option>
+              <option value="">38</option>
+              <option value="">39</option>
+              <option value="">40</option>
+              <option value="">41</option>
+              <option value="">42</option>
+              <option value="">43</option>
+              <option value="">44</option>
+              <option value="">45</option>
+            </select>
+          </div>
+          <button>Agregar Al Carrito</button>
         </div>
-        <div class="info">
-            <img src="Imagenes/img9.jpeg" alt="" id="img">
-            <h2 id="modelo">Nike Modelo 1</h2>
-            <p id="descripcion">Descripcion Modelo 1 </p>
-            
-            <span class="precio" id="precio">$159.000</span>
-            
-            <div class="fila"> 
-                <div class="SIZE">
-                    <label for="">Tallas</label>
-                    <select name="" id="">
-                        <option value="">35</option>
-                        <option value="">36</option>
-                        <option value="">37</option>
-                        <option value="">38</option>
-                        <option value="">39</option>
-                        <option value="">40</option>
-                        <option value="">41</option>
-                        <option value="">42</option>
-                        <option value="">43</option>
-                        <option value="">44</option>
-                        <option value="">45</option>
-                    </select>
-                </div>
-                <button>Agregar Al Carrito</button>
-            </div>
-        </div>
+      </div>
     </div>
-    </section>
+  </section>
 
-    <script type="text/javascript">
-        let mostrador = document.getElementById("mostrador")
-        let seleccion = document.getElementById("seleccion")
-        let imgSeleccionada = document.getElementById("img")
-        let modeloSeleccionado = document.getElementById("modelo")
-        let descripSeleccionada = document.getElementById("descripcion")
-        let precioSeleccionado = document.getElementById("precio")
+  <script type="text/javascript">
+    let mostrador = document.getElementById("mostrador")
+    let seleccion = document.getElementById("seleccion")
+    let imgSeleccionada = document.getElementById("img")
+    let modeloSeleccionado = document.getElementById("modelo")
+    let descripSeleccionada = document.getElementById("descripcion")
+    let precioSeleccionado = document.getElementById("precio")
 
-//funcion que carga la info de los item seleccionado
-function cargar(item){
-    quitarbordes();
-    mostrador.style.width = "100%";/*mostrador hacia la derecha*/
-    seleccion.style.width = "39%";
-    seleccion.style.opacity = "1";
-    item.style.border = "2px solid red";
+    //funcion que carga la info de los item seleccionado
+    function cargar(item) {
+      quitarbordes();
+      mostrador.style.width = "100%";/*mostrador hacia la derecha*/
+      seleccion.style.width = "39%";
+      seleccion.style.opacity = "1";
+      item.style.border = "2px solid red";
 
-    imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
+      imgSeleccionada.src = item.getElementsByTagName("img")[0].src;
 
-    modeloSeleccionado.innerHTML = item.getElementsByTagName("p")[0].innerHTML;
+      modeloSeleccionado.innerHTML = item.getElementsByTagName("p")[0].innerHTML;
 
-    descripSeleccionada.innerHTML = "Descripcion Del Modelo";
+      descripSeleccionada.innerHTML = "Descripcion Del Modelo";
 
-    precioSeleccionado.innerHTML = item.getElementsByTagName("span")[0].innerHTML
-}
-function quitarbordes(){
-    var items = document.getElementsByClassName("item");
-    for(i=0; i<items.length; i++){
-    items[i].style.border = "none"; 
+      precioSeleccionado.innerHTML = item.getElementsByTagName("span")[0].innerHTML
     }
-}
+    function quitarbordes() {
+      var items = document.getElementsByClassName("item");
+      for (i = 0; i < items.length; i++) {
+        items[i].style.border = "none";
+      }
+    }
 
-function cerrar(){
-    mostrador.style.width = "100%";
-    seleccion.style.width = "0%";
-    seleccion.style.opacity = "0%";
-    quitarbordes();
-}
-    </script>
-</body>  
+    function cerrar() {
+      mostrador.style.width = "100%";
+      seleccion.style.width = "0%";
+      seleccion.style.opacity = "0%";
+      quitarbordes();
+    }
+  </script>
+</body>
+
 </html>
