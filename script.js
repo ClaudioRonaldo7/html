@@ -8,8 +8,8 @@ let precioSeleccionado = document.getElementById("precio")
 //funcion que carga la info de los item seleccionado
 function cargar(item){
     quitarbordes();
-    mostrador.style.width = "60%";
-    seleccion.style.width = "40%";
+    mostrador.style.width = "100%";/*mostrador hacia la derecha*/
+    seleccion.style.width = "39%";
     seleccion.style.opacity = "1";
     item.style.border = "2px solid red";
 

@@ -1,323 +1,4 @@
-body{
-  background-image:url(./img/IMG2.jpg);
-  height: 2000px;
-  background-size: cover;
-  background-size: 90rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-}
 
-::selection {
-  color: #fff;
-  text-shadow: none;
-  background: rgb(255, 255, 255);
-}
-::-moz-selection {
-  color: #fff;
-  text-shadow: none;
-  background: rgb(255, 255, 255);
-}
-html, body {
-  width: 0px;
-  height: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-#container {
-  color: rgb(255, 255, 255);
-  position: fixed;
-  width: 340px;
-  height: 280px;
-  top: 50%;
-  left: 50%;
-  margin-top: -140px;
-  margin-left: -170px;
-  /*background: #fff;*/
-  background-image: url(img/IMG3.jpg);
-  /*background-image: url("img/img1.png"), url("img/img1.png");*/
-  border-radius: 3px;
-  border: 1px solid #ccc;
-  box-shadow: 0 1px 2px rgb(255, 255, 255);
-  -webkit-animation-name: bounceIn;
-  -webkit-animation-fill-mode: both;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-name: bounceIn;
-  -moz-animation-fill-mode: both;
-  -moz-animation-duration: 1s;
-  -moz-animation-iteration-count: 1;
-  -moz-animation-timing-function: linear;
-  animation-name: bounceIn;
-  animation-fill-mode: both;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-form {
-  margin: 0 auto;
-  margin-top: 20px;
-}
-label {
-  color: #ffffff;
-  display: inline-block;
-  margin-left: 18px;
-  padding-top: 10px;
-  font-size: 14px;
-}
-p a {
-  font-size: 11px;
-  color: #ffffff;
-  float: right;
-  margin-top: -13px;
-  margin-right: 20px;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  transition: all .4s ease;
-}
-p a:hover {
-  color: #ffffff;
-}
-input {
-  font-family:Arial, Helvetica, sans-serif;
-  outline: none;
-}
-input[type=name],
-input[type=password] {
-  color: #000000;
-  padding-left: 10px;
-  margin: 10px;
-  margin-top: 12px;
-  margin-left: 18px;
-  width: 290px;
-  height: 35px;
-  border: 1px solid #ffffff;
-  border-radius: 2px;
-  box-shadow: inset 0 1.5px 3px rgba(255, 255, 255, 0.4), 0 0 0 5px #f5f7f8;
-  -webkit-transition: all .4s ease;
-  -moz-transition: all .4s ease;
-  transition: all .4s ease;
-}
-
-input[type=name]:hover,
-input[type=password]:hover {
-  border: 1px solid #ffffff;
-  box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
-}
-input[type=name]:focus,
-input[type=password]:focus {
-  border: 1px solid #a8c9e4;
-  box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
-}
-#lower {
-  background: #ecf2f5;
-  width: 100%;
-  height: 69px;
-  margin-top: 20px;
-  box-shadow: inset 0 1px 1px #fff;
-  border-top: 1px solid #ccc;
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-}
-
-input[type=checkbox] {
-  margin-left: 20px;
-  margin-top: 30px;
-}
-.check {
-  margin-left: 3px;
-  font-size: 11px;
-  color: #000000;
-  text-shadow: 0 1px 0 #fff;
-}
-input[type=submit] {
-  float: right;
-  margin-right: 20px;
-  margin-top: 20px;
-  width: 80px;
-  height: 30px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
-  background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
-  background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
-  border-radius: 30px;
-  border: 1px solid #66add6;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
-  cursor: pointer;
-}
-input[type=submit]:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
-  background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
-  background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
-}
-input[type=submit]:active {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
-  background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
-  background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #464040;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 50px 52px;
-    text-decoration: none;
-}
-li form{
-    margin-top: 50px;
-}
-
-li a:hover {
-    background-color: #e01324;
-}
-.slider-container {
-    scroll-snap-type: x mandatory;
-}
-
-.slide {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
-}
-
-.slide-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: calc( 500px + 3em);
-}
-
-.slide-open:checked + .slide-item {
-    position: static;
-    opacity: 100;
-}
-
-.slide-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-
-.slide-item img {
-    display: block;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.slide-control {
-    background: rgba(0, 0, 0, 0.28);
-    border-radius: 50%;
-    color: #fff;
-    cursor: pointer;
-    display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
-    width: 40px;
-    z-index: 10;
-}
-
-.slide-control.prev {
-    left: 2%;
-}
-
-.slide-control.next {
-    right: 2%;
-}
-
-.slide-control:hover {
-    background: rgba(0, 0, 0, 0.8);
-    color: #aaaaaa;
-}
-
-#slide-1:checked ~ .control-1,
-#slide-2:checked ~ .control-2,
-#slide-3:checked ~ .control-3 {
-    display: block;
-}
-
-.slide-indicador {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-
-.slide-indicador li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.slide-circulo {
-    color: #828282;
-    cursor: pointer;
-    display: block;
-    font-size: 35px;
-}
-
-.slide-circulo:hover {
-    color: #aaaaaa;
-}
-
-#slide-1:checked ~ .control-1 ~ .slide-indicador 
-     li:nth-child(1) .slide-circulo,
-#slide-2:checked ~ .control-2 ~ .slide-indicador 
-      li:nth-child(2) .slide-circulo,
-#slide-3:checked ~ .control-3 ~ .slide-indicador 
-      li:nth-child(3) .slide-circulo {
-    color: #428bca;
-}
-
-#titulo {
-    width: 100%;
-    position: absolute;
-    padding: 0px;
-    margin: 0px auto;
-    text-align: center;
-    font-size: 27px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Open Sans', sans-serif;
-    z-index: 9999;
-    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
-         -1px 0px 2px rgba(255, 255, 255, 0);
-}
-.slide-text{
-    color: black; 
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 35px;
-    position: absolute;
-    top: 10%;
-    right: 1%;
-}    
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
 
 * {
@@ -327,7 +8,7 @@ li a:hover {
   font-family: "Open Sans";
 }
 .contenido{
-  max-width: 1100px;
+  max-width: 1250px;/*Tamano de categoria de zapatillas*/ 
   width: 100%;
   margin: 40px auto;
   display: flex;
@@ -339,23 +20,23 @@ li a:hover {
 .mostrador .fila{
   display: flex;
   justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 0px;/*tamano del cuadrado grande al seleccionar */
 }
 .mostrador .fila .item{
   max-width: 210px;
   padding: 30px;
-  height: 250px;
-  text-align: center;
-  margin: 0 10px;
+  height: 300px;/* tamano de diferencia de las zapatillas alto y bajo*/
+  text-align: center ;
+  margin: 0 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;/*tamano y forma de la zapailla*/
   transition: .3s;
 }
 .mostrador .fila .item:hover{
-  background-color: #e6e6e6;
+  background-color: #ffffff;/*color de cuadrado de las zapatillas*/
 }
 .mostrador .fila .item img{
-  width: 100%;
+  width: 100%;/*Tamano de la zapatilla dentro del cuadrado*/
   margin: 30px 0;
 }
 .mostrador .fila .item .descripcion{
@@ -363,15 +44,15 @@ li a:hover {
   font-weight: bold;
 }
 .mostrador .fila .item .precio{
-  color: #f81515;
+  color: #f81515;/*Color de precio*/
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;/*Tamano del precio*/
 }
 .seleccion{
   transition: .5s ease;
   opacity: 0;
   width: 0%;
-  border: 1px solid #cccc;
+  border: 1px solid #cccc;/*Color de la linea al seleccionar*/
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -380,32 +61,34 @@ li a:hover {
 }
 .cerrar{
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 5px;
+  top: 0px;/*tamano de la x(cerrar)*/
   cursor: pointer;
 }
 .info{
-  padding: 20px;
+  padding: 20px;/*Borde de precio y talla*/
 }
 .info img{
   display: block;
-  margin: 30px;
-  width: 80%;
+  margin: 40px;/*lugar donde se posiciona la zapatilla(derecha o izquirda) */
+  width: 85%;/*Tamano de la zapatilla al entrar a la seleccion */
 }
 .info h2{
-  color: #707070;
-  margin-bottom: 10px;
+  color: #707070;/*Color de letras Modelos*/
+  margin-bottom: 0px;/*separacion de letras "Modelos"*/
 }
+
+
 .info p{
-  font-size: 14px;
-  color: #707070;
-  margin-bottom: 10px;
+  font-size: 15px;/*tamano de (descripcion del modelo)*/
+  color: #707070;/*Color de letras "descripcion del modelo"*/
+  margin-bottom: 0px;/*lugar para colocar el "Agregar al carrito"*/
 }
-.info precio{
-  font-size: 30px;
-  font-weight: bold;
-  color: #f81515;
-  margin-bottom: 10px;
+.info .precio{
+  font-size: 20px;/*tamano del precio*/
+  font-weight: bold;/*estilo de letra*/
+  color: #707070;/*Color de letras "precio"*/
+  margin-bottom: 0px;
   display: block;
 }
 .info .fila{
@@ -414,18 +97,19 @@ li a:hover {
 }
 .info .fila label{
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
 }
 .info .fila select{
-  width: 100px;
-  font-size: 18px;
-  padding: 6px;
+  width: 80px;/*Tamano(ancho) de la talla*/
+  font-size: 19px;/*Tamano del numero de la talla*/
+  padding: 0px;/*Tamano(alto) de la talla*/
   margin-right: 30px;
 }
 .info .fila button{
-  height: 40px;
+  height: 30px;/*Tamano de "agregar al carrito"*/
   border: none;
-  padding: 0 10px;
+  width: 1000px;
+  padding: 0px;
   color: #ffff;
   background-color: #f81515;
 }
